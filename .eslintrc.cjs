@@ -10,7 +10,12 @@ module.exports = {
       node: {
         extensions: ['.ts', '.tsx', '.js'],
       },
-      typescript: {},
+      typescript: {
+        directory: './src',
+        alias: {
+          '@components': './src/components',
+        },
+      },
     },
     react: {
       version: 'detect',

@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "type-check": "tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chormatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%"
   },
   "dependencies": {
     "lint-staged": "^15.0.2",
@@ -37,6 +38,7 @@
     "@typescript-eslint/parser": "^6.9.1",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "autoprefixer": "^10.4.16",
+    "chromatic": "^9.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
@@ -62,5 +64,7 @@
       "eslint --cache --fix --max-warnings=0"
     ]
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "readme": "ERROR: No README data found!",
+  "_id": "frontend_portfolio@0.1.0"
 }
