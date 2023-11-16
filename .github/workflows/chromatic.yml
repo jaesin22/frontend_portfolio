@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
+      - name: Generate Environment Variables File for Production
+        run: |
+          echo "CHROMATIC_PROJECT_TOKEN=$CHROMATIC_PROJECT_TOKEN" >> .env.production
       - uses: actions/checkout@v1
       - run: yarn
         #👇 Adds Chromatic as a step in the workflow
