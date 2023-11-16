@@ -8,7 +8,7 @@ module.exports = {
     // import/resolver` 는 `eslint-plugin-import` 의 경로 설정 옵션
     'import/resolver': {
       node: {
-        extensions: ['.ts', '.tsx'],
+        extensions: ['.ts', '.tsx', '.js'],
       },
       typescript: {},
     },
@@ -71,6 +71,7 @@ module.exports = {
       {
         ts: 'never',
         tsx: 'never',
+        js: 'never',
       },
     ],
     'import/order': [
