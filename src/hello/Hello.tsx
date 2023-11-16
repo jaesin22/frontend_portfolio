@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Hello({ name, big }: never) {
   if (big) {
     return <h1>ㅎㅇㅎㅇ, {name}</h1>;
