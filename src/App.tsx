@@ -1,13 +1,11 @@
-import reactLogo from './assets/react.svg';
+import Header from './components/organism/Header';
 
 import './App.css';
 
 function App() {
   return (
     <div>
-      <a href='https://react.dev' target='_blank' rel='noreferrer'>
-        <img src={reactLogo} className='logo react' alt='React logo' />
-      </a>
+      <Header />
     </div>
   );
 }
