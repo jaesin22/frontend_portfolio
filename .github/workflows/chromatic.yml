@@ -15,7 +15,7 @@ jobs:
         run: |
           echo "REACT_APP_CHROMATIC_PROJECT_TOKEN=$REACT_APP_CHROMATIC_PROJECT_TOKEN" >> .env.production
       - uses: actions/checkout@v1
-      - run: yarn
+      - run: npm
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
