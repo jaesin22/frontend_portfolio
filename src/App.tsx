@@ -2,6 +2,7 @@ import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
 import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import './App.css';
+import Work from './components/molecule/SectionSubTitle';
 
 function App() {
   return (
@@ -9,9 +10,10 @@ function App() {
       <Header />
     <main className='box-root m-auto max-w-[1024px] mt-20 font-main'>
       <IntroduceCard />
-      <div className=''>
       <SocialIconGroup />
-      </div>
+      <section>
+        <Work title='Work'/>
+      </section>
       </main>
     </div>
     
