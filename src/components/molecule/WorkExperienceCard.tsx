@@ -1,9 +1,5 @@
-function WorkExperienceCard() {
-    return (
-<div>
-    
-</div>
-    )
-}
+const WorkExperienceCard = () => {
+  return <div />;
+};
 
 export default WorkExperienceCard;

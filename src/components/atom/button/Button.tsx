@@ -30,7 +30,7 @@ interface ButtonProps {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-function Button({
+const Button = ({
   label,
   onMouseOver,
   onMouseOut,
@@ -40,7 +40,7 @@ function Button({
   renderHoverContent,
   children,
   onClick,
-}: ButtonProps) {
+}: ButtonProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   const handleMouseOver = () => {
@@ -73,9 +73,11 @@ function Button({
     >
       {label}
       {children}
-      {renderHoverContent && isHover && <div className='absolute w-full h-0.5 bg-current self-center mt-2.5' />}
+      {renderHoverContent && isHover && (
+        <div className='absolute w-full h-0.5 bg-current self-center mt-2.5' />
+      )}
     </button>
   );
-}
+};
 
 export default Button;

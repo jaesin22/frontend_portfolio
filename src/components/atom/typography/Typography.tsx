@@ -3,8 +3,8 @@ interface TypographyProps {
   className: string;
 }
 
-function Typography({ text, className }: TypographyProps) {
+const Typography = ({ text, className }: TypographyProps) => {
   return <span className={`${className}`}>{text}</span>;
-}
+};
 
 export default Typography;
