@@ -1,10 +1,10 @@
-import Typography from "../atom/typgography/Typography";
+import Typography from "../atom/typography/Typography";
 
 interface workProps {
     title: string;
 }
 
-function Work ({title} : workProps) {
+function SectionSubTitle ({title} : workProps) {
     return (
         <div className="mt-20">
             <Typography text={title} className="font-bold justify-start flex text-4xl text-left m-0" />
@@ -14,4 +14,4 @@ function Work ({title} : workProps) {
 
 }
 
-export default Work;
+export default SectionSubTitle;

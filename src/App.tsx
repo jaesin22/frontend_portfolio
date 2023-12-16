@@ -2,7 +2,7 @@ import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
 import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import './App.css';
-import Work from './components/molecule/SectionSubTitle';
+import SectionSubTitle from './components/molecule/SectionSubTitle';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <IntroduceCard />
       <SocialIconGroup />
       <section>
-        <Work title='Work'/>
+        <SectionSubTitle title='Work'/>
       </section>
       </main>
     </div>

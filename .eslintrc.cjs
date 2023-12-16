@@ -4,19 +4,16 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  root: true,
   settings: {
     // import/resolver` 는 `eslint-plugin-import` 의 경로 설정 옵션
     'import/resolver': {
       node: {
-        extensions: ['.ts', '.tsx', '.js'],
+        extensions: ['.ts', '.tsx'],
       },
-      typescript: {
-        directory: './src',
-        alias: {
-          '@components': './src/components',
-        },
-      },
+      typescript: {},
     },
+    'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
     react: {
       version: 'detect',
     },
@@ -25,6 +22,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:import/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
@@ -32,7 +30,6 @@ module.exports = {
     'prettier',
     'prettier/prettier',
     'plugin:prettier/recommended',
-    'plugin:storybook/recommended',
   ],
   overrides: [
     {
@@ -45,7 +42,6 @@ module.exports = {
       },
     },
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -58,31 +54,35 @@ module.exports = {
     'no-console': ['warn', { allow: ['error'] }],
     'react-hooks/rules-of-hooks': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'react/require-default-props': 'off',
-    // props 확산 방지기능 제외
-    'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     'no-use-before-define': 'off',
+    'no-return-assign': 'off',
+    'react/require-default-props': 'off',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     eqeqeq: 'error',
     'dot-notation': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
       {
         ts: 'never',
         tsx: 'never',
-        js: 'never',
+      },
+    ],
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^react-modal/.+'],
       },
     ],
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        groups: ['builtin', 'external', ['parent', 'sibling'], 'index'],
         pathGroups: [
           {
             pattern: 'react',
