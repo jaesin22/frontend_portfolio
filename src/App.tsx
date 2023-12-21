@@ -1,15 +1,26 @@
-import reactLogo from './assets/react.svg';
-
+import SocialIconGroup from './components/molecule/SocialIconsGroup';
+import Header from './components/organism/Header';
+import IntroduceCard from './components/organism/IntroduceCard';
+import SideProject from './components/organism/SideProject';
+import Work from './components/organism/Work';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <a href='https://react.dev' target='_blank' rel='noreferrer'>
-        <img src={reactLogo} className='logo react' alt='React logo' />
-      </a>
+    <div className='pb-[200px]'>
+      <Header />
+      <main className='box-root m-auto max-w-[1024px] mt-20 font-main'>
+        <IntroduceCard />
+        <SocialIconGroup />
+        <section>
+          <Work />
+        </section>
+        <section>
+          <SideProject />
+        </section>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
