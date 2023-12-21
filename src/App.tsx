@@ -1,18 +1,22 @@
 import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
+import SideProject from './components/organism/SideProject';
+import Work from './components/organism/Work';
 import './App.css';
-import SectionSubTitle from './components/molecule/SectionSubTitle';
 
 const App = () => {
   return (
-    <div>
+    <div className='pb-[200px]'>
       <Header />
       <main className='box-root m-auto max-w-[1024px] mt-20 font-main'>
         <IntroduceCard />
         <SocialIconGroup />
         <section>
-          <SectionSubTitle title='Work' />
+          <Work />
+        </section>
+        <section>
+          <SideProject />
         </section>
       </main>
     </div>
