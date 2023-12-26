@@ -18,18 +18,18 @@ interface ProjectProps {
   position: string;
   id: number;
   engname: string;
+  introduce: string;
 }
 const SideProject = ({ project }: ProjectTypes) => {
   return (
     <div>
       <SectionSubTitle title='Side Project' />
       {project.map((items: ProjectProps) => (
-        <div className='flex box-border w-full'>
+        <div className='flex box-border w-full' key={items.id}>
           <LogoBadge img={OPGG} />
-          <div>
-            <CompanyInfoBrief value={items} key={items.id} />
-
-            <Experience />
+          <div className='mb-12'>
+            <CompanyInfoBrief value={items} />
+            <Experience exp={items.detail} />
           </div>
         </div>
       ))}

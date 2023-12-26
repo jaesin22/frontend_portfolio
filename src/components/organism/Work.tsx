@@ -1,3 +1,4 @@
+import JIIN from '../../assets/image/JIIN_LOGO.png';
 import TELUS from '../../assets/image/TELUS_LOGO.png';
 import CompanyInfoBrief from '../molecule/CompanyInfoBrief';
 import Experience from '../molecule/Experience';
@@ -18,18 +19,23 @@ interface WorkProps {
   position: string;
   id: number;
   engname: string;
+  introduce: string;
 }
 
+const logoMap: { [key: string]: string } = {
+  TELUS,
+  JIIN,
+};
 const Work = ({ WorkValues }: WorkValue) => {
   return (
     <div>
       <SectionSubTitle title='Work' />
       {WorkValues.map((items: WorkProps) => (
-        <div className='flex box-border w-full'>
-          <LogoBadge img={TELUS} />
-          <div>
-            <CompanyInfoBrief value={items} key={items.id} />
-            <Experience />
+        <div className='flex box-border w-full' key={items.id}>
+          <LogoBadge img={logoMap[items.engname]} />
+          <div className='mb-12'>
+            <CompanyInfoBrief value={items} />
+            <Experience exp={items.detail} />
           </div>
         </div>
       ))}
