@@ -3,6 +3,7 @@ import React from 'react';
 
 import App from './App';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactDOM from 'react-dom/client';
 
 async function enableMocking() {
@@ -15,10 +16,26 @@ async function enableMocking() {
   return worker.start();
 }
 
+// function queryErrorHandler(error: unknown): string {
+//   const title = error instanceof Error ? error.message : 'error!';
+//   return title;
+// }
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    // queries: {
+    //   suspense: true,
+    //   retry: 0,
+    // },
+  },
+});
+
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </QueryClientProvider>
   );
 });

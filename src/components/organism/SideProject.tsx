@@ -4,17 +4,35 @@ import Experience from '../molecule/Experience';
 import LogoBadge from '../molecule/LogoBadge';
 import SectionSubTitle from '../molecule/SectionSubTitle';
 
-const SideProject = () => {
+interface ProjectTypes {
+  project: ProjectProps[];
+}
+
+interface ProjectProps {
+  name: string;
+  enddate: string;
+  href: string;
+  method: string;
+  detail: [];
+  startdate: string;
+  position: string;
+  id: number;
+  engname: string;
+}
+const SideProject = ({ project }: ProjectTypes) => {
   return (
     <div>
       <SectionSubTitle title='Side Project' />
-      <div className='flex box-border w-full'>
-        <LogoBadge img={OPGG} />
-        <div>
-          <CompanyInfoBrief />
-          <Experience />
+      {project.map((items: ProjectProps) => (
+        <div className='flex box-border w-full'>
+          <LogoBadge img={OPGG} />
+          <div>
+            <CompanyInfoBrief value={items} key={items.id} />
+
+            <Experience />
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

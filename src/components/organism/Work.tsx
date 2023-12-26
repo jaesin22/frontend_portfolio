@@ -4,17 +4,35 @@ import Experience from '../molecule/Experience';
 import LogoBadge from '../molecule/LogoBadge';
 import SectionSubTitle from '../molecule/SectionSubTitle';
 
-const Work = () => {
+interface WorkValue {
+  WorkValues: WorkProps[];
+}
+
+interface WorkProps {
+  name: string;
+  enddate: string;
+  href: string;
+  method: string;
+  detail: [];
+  startdate: string;
+  position: string;
+  id: number;
+  engname: string;
+}
+
+const Work = ({ WorkValues }: WorkValue) => {
   return (
     <div>
       <SectionSubTitle title='Work' />
-      <div className='flex box-border w-full'>
-        <LogoBadge img={TELUS} />
-        <div>
-          <CompanyInfoBrief />
-          <Experience />
+      {WorkValues.map((items: WorkProps) => (
+        <div className='flex box-border w-full'>
+          <LogoBadge img={TELUS} />
+          <div>
+            <CompanyInfoBrief value={items} key={items.id} />
+            <Experience />
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

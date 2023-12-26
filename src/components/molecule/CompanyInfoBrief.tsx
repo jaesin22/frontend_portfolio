@@ -1,19 +1,36 @@
 import Typography from '../atom/typography/Typography';
 
-const CompanyInfoBrief = () => {
+interface ProjectTypes {
+  value: ProjectProps;
+}
+
+interface ProjectProps {
+  name: string;
+  enddate: string;
+  href: string;
+  method: string;
+  detail: [];
+  startdate: string;
+  position: string;
+}
+
+const CompanyInfoBrief = ({ value }: ProjectTypes) => {
+  if (!value) {
+    return null;
+  }
   return (
     <div className='w-full'>
       <div className='flex items-center box-border'>
         <a
-          href='https://www.naver.com'
+          href={value.href}
           className='transition-opacity duration-200 ease-in-out'
         >
           <span className='sr-only'>text</span>
-          <Typography className='font-semibold text-2xl' text='쿼타랩' />
+          <Typography className='font-semibold text-2xl' text={value.name} />
         </a>
         <Typography
           className='font-normal ml-2 text-sm'
-          text='2022.03 ~ 2023.10'
+          text={`${value.startdate} ~ ${value.enddate}`}
         />
       </div>
       <div className='text-left'>

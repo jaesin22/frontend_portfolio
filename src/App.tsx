@@ -1,18 +1,22 @@
-import { useEffect } from 'react';
-
+import getAPI from './api/api';
 import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
 import SideProject from './components/organism/SideProject';
 import Work from './components/organism/Work';
+
 import './App.css';
+import { useQuery } from '@tanstack/react-query';
 
 const App = () => {
-  useEffect(() => {
-    fetch('/')
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+  const { data, isLoading } = useQuery({
+    queryKey: ['api'],
+    queryFn: getAPI,
+  });
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div className='pb-[200px]'>
@@ -20,12 +24,16 @@ const App = () => {
       <main className='box-root m-auto max-w-[1024px] mt-20 font-main'>
         <IntroduceCard />
         <SocialIconGroup />
-        <section>
-          <Work />
-        </section>
-        <section>
-          <SideProject />
-        </section>
+        {data?.work && (
+          <section>
+            <Work WorkValues={data.work} />
+          </section>
+        )}
+        {data?.project && (
+          <section>
+            <SideProject project={data.project} />
+          </section>
+        )}
       </main>
     </div>
   );

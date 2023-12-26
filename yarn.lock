@@ -3935,6 +3935,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.14.2":
+  version: 5.14.2
+  resolution: "@tanstack/query-core@npm:5.14.2"
+  checksum: 1171510ecfaf51693de021c164dc94297260bd88f560705cda2cae460c869cf1bbe5f08389fcf36d69c3b8cfe6b24fec492bfa962afdbaabbe3c9e99065df6fd
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.14.2":
+  version: 5.14.2
+  resolution: "@tanstack/react-query@npm:5.14.2"
+  dependencies:
+    "@tanstack/query-core": "npm:5.14.2"
+  peerDependencies:
+    react: ^18.0.0
+  checksum: c92c8b486c8fdb86a9a66005c3dc547b6b72684485654a5d52ecc0faeeb2e78cba2c6d8157a1ef62c1e93b6de7914c58781ca6c723a56634ceee4a7dd462d546
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^9.0.0":
   version: 9.3.3
   resolution: "@testing-library/dom@npm:9.3.3"
@@ -5099,6 +5117,17 @@ __metadata:
   version: 4.7.0
   resolution: "axe-core@npm:4.7.0"
   checksum: 89ac5712b5932ac7d23398b4cb5ba081c394a086e343acc68ba49c83472706e18e0799804e8388c779dcdacc465377deb29f2714241d3fbb389cf3a6b275c9ba
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.6.2":
+  version: 1.6.2
+  resolution: "axios@npm:1.6.2"
+  dependencies:
+    follow-redirects: "npm:^1.15.0"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 9b77e030e85e4f9cbcba7bb52fbff67d6ce906c92d213e0bd932346a50140faf83733bf786f55bd58301bd92f9973885c7b87d6348023e10f7eaf286d0791a1d
   languageName: node
   linkType: hard
 
@@ -7222,6 +7251,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.15.0":
+  version: 1.15.3
+  resolution: "follow-redirects@npm:1.15.3"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 915a2cf22e667bdf47b1a43cc6b7dce14d95039e9bbf9a24d0e739abfbdfa00077dd43c86d4a7a19efefcc7a99af144920a175eedc3888d268af5df67c272ee5
+  languageName: node
+  linkType: hard
+
 "for-each@npm:^0.3.3":
   version: 0.3.3
   resolution: "for-each@npm:0.3.3"
@@ -7287,6 +7326,7 @@ __metadata:
     "@storybook/react": "npm:7.5.3"
     "@storybook/react-vite": "npm:7.5.3"
     "@storybook/testing-library": "npm:0.2.2"
+    "@tanstack/react-query": "npm:^5.14.2"
     "@types/babel__core": "npm:^7.20.4"
     "@types/node": "npm:^20.10.5"
     "@types/react": "npm:^18.2.37"
@@ -7295,6 +7335,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.9.1"
     "@vitejs/plugin-react-swc": "npm:^3.3.2"
     autoprefixer: "npm:^10.4.16"
+    axios: "npm:^1.6.2"
     chromatic: "npm:^9.0.0"
     cross-env: "npm:^7.0.3"
     dotenv: "npm:^16.3.1"
@@ -10309,7 +10350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
