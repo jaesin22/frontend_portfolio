@@ -2,6 +2,7 @@ import getAPI from './api/api';
 import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
+import Project from './components/organism/Project';
 import SideProject from './components/organism/SideProject';
 import Work from './components/organism/Work';
 
@@ -32,6 +33,11 @@ const App = () => {
         {data?.project && (
           <section>
             <SideProject project={data.project} />
+          </section>
+        )}
+        {data?.project && (
+          <section>
+            <Project project={data.project} />
           </section>
         )}
       </main>
