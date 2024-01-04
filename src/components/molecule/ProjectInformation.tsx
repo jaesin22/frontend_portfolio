@@ -6,6 +6,7 @@ const ProjectInformation = () => {
       <div className='flex items-center box-border'>
         <a
           href='value.href'
+          target='_blank'
           className='transition-opacity duration-200 ease-in-out'
         >
           <span className='sr-only'>text</span>

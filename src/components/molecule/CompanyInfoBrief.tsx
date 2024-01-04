@@ -25,6 +25,8 @@ const CompanyInfoBrief = ({ value }: ProjectTypes) => {
         <a
           href={value.href}
           className='transition-opacity duration-200 ease-in-out'
+          target='_blank'
+          rel='noreferrer'
         >
           <span className='sr-only'>text</span>
           <Typography className='font-semibold text-2xl' text={value.name} />

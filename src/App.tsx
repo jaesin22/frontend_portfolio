@@ -21,25 +21,27 @@ const App = () => {
   return (
     <div className='pb-[200px]'>
       <Header />
-      <main className='box-root m-auto max-w-[1024px] mt-20 font-main'>
-        <IntroduceCard />
-        <SocialIconGroup />
-        {data?.work && (
-          <section>
-            <Work WorkValues={data.work} />
-          </section>
-        )}
-        {data?.project && (
-          <section>
-            <SideProject project={data.project} />
-          </section>
-        )}
-        {data?.project && (
-          <section>
-            <Project project={data.project} />
-          </section>
-        )}
-      </main>
+      <div className='sm:max-w-[980px] lg:max-w-[1280px] md:max-w-[1024px] mx-auto'>
+        <main className='box-root px-4 max-w-[1024px] ms:px-6 sm:px-8 m-auto  mt-20 font-main'>
+          <IntroduceCard />
+          <SocialIconGroup />
+          {data?.work && (
+            <section>
+              <Work WorkValues={data.work} />
+            </section>
+          )}
+          {data?.project && (
+            <section>
+              <SideProject project={data.project} />
+            </section>
+          )}
+          {data?.project && (
+            <section>
+              <Project project={data.project} />
+            </section>
+          )}
+        </main>
+      </div>
     </div>
   );
 };

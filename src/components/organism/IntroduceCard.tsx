@@ -7,7 +7,7 @@ const IntroduceCard = () => {
       <div className='font-main'>
         <Typography
           text={introduceText}
-          className='text-6xl tracking-wide leading-tight text-left flex font-medium font-main whitespace-pre-line'
+          className='lg:text-6xl text-4xl  tracking-wide leading-tight text-left flex font-medium font-main whitespace-pre-line'
         />
         <div className='mt-6 text-left text-lg font-main font-normal'>
           <Typography
