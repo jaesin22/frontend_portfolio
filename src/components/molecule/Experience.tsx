@@ -3,6 +3,7 @@ import Typography from '../atom/typography/Typography';
 interface expProps {
   role: string;
   explain: string;
+  id: number;
 }
 
 interface expTypes {
@@ -16,7 +17,7 @@ const Experience = ({ exp }: expTypes) => {
   return (
     <div>
       {exp.map((items: expProps) => (
-        <div className=' border-l-4 border-[#e0e0e0] mt-4 pl-4'>
+        <div className=' border-l-4 border-[#e0e0e0] mt-4 pl-4' key={items.id}>
           <div className='flex mb-1 items-center'>
             <Typography
               text={items.role}

@@ -1,4 +1,4 @@
-import getAPI from './api/api';
+import { getAPI } from './api/api';
 import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
@@ -14,7 +14,6 @@ const App = () => {
     queryKey: ['api'],
     queryFn: getAPI,
   });
-
   if (isLoading) {
     return null;
   }

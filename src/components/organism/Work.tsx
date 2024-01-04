@@ -35,7 +35,7 @@ const Work = ({ WorkValues }: WorkValue) => {
           <LogoBadge img={logoMap[items.engname]} />
           <div className='mb-12'>
             <CompanyInfoBrief value={items} />
-            <Experience exp={items.detail} />
+            <Experience exp={items.detail} key={items.id} />
           </div>
         </div>
       ))}

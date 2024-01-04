@@ -10,52 +10,59 @@ const handlers = [
         work: [
           {
             name: '텔루스 인터네셔널 에이아이코리아',
-            introduce: '테슷트',
+            introduce:
+              '텔루스 인터내셔널 에이아이코리아는 기업의 인공지능 학습 모델을 평가하고 개선하는 일을 돕고 있습니다.',
             engname: 'TELUS',
-            id: 1,
-            href: 'http://api.test.com/users/1',
+            id: 1000,
+            href: 'https://www.telusinternational.com/',
             startdate: '2022.08',
             enddate: '2023.11',
             method: 'GET',
             position: 'Frontend Developer',
             detail: [
               {
+                id: 10001,
                 role: 'Frontend Developer',
                 explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
+                  '기존에 JSP로 만들어진 사내 작업등록 페이지를 React로 신규 개발하는 업무를 수행했습니다. 신규로 개발하며 반응형 웹 및 기존에 있었던 input 관련 불편한 점을 해소하여 사용자 경험 향상에 기여했습니다.',
               },
               {
-                role: 'Frontend Chapter Lead',
+                id: 10002,
+                role: 'JavaScript Developer',
                 explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
+                  '사내 node.js 런타임 환경에서 es6 문법을 일부 지원함에 따라 이전 JavaScript ES5 문법으로 작성된 코드를 ES6으로 업데이트하는 업무를 수행했습니다. 변수 호이스팅으로 인한 사이드 이펙트를 해결하여 코드 관련 이슈 발생 빈도를 15% 감소시킨 경험이 있습니다.',
+              },
+              {
+                id: 10003,
+                role: 'JavaScript Developer',
+                explain:
+                  'Bixby 팀의 Web SDK 신규 개발 프로젝트에 투입되어 개발을 일부 진행했습니다. 코드 분석 및 일부 구현 단계에서 퇴사하게 되었습니다.',
               },
             ],
           },
           {
             name: '지인시스템',
-            introduce: 'test',
+            introduce:
+              '지인시스템은 공공, 국방, 민간 분야 시스템 통합(SI) 전문업체로서 기업의 요구사항에 맞게 제품을 개발하고 있습니다.',
             engname: 'JIIN',
-            id: 1,
-            href: 'http://api.test.com/users/1',
+            id: 2000,
+            href: 'http://www.ji-in.co.kr/',
             startdate: '2019.01',
             enddate: '2022.03',
             method: 'GET',
-            position: 'Frontend Developer',
+            position: 'Web Developer',
             detail: [
               {
-                role: 'Frontend Chapter Lead',
+                id: 20001,
+                role: 'Web Developer',
                 explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
+                  '국가 위기관리 및 전시전환절차 연습인 을지훈련을 체계적으로 할 수 있는 상황도를 만들었습니다. 주니어 개발자와 협업하여 프로젝트를 진행하였습니다. 주로 맡았던 부분은 서버와의 소켓/ajax 통신과, 서버로부터 전달받은 좌표를 계산해서 상황도에 도시하는 역할을 담당했습니다.',
               },
               {
-                role: 'Frontend Chapter Lead',
+                id: 20003,
+                role: '형상관리 도구로 Git 신규 도입',
                 explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
-              },
-              {
-                role: 'Frontend Chapter Lead',
-                explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
+                  '기존에 svn을 사용하며 충돌이 자주 발생하는 문제점을 해결하기 위해 팀 내 형상관리 도구를 git으로 마이그레이션하여 충돌 빈도를 줄이고, 더 나은 작업 환경을 구축했습니다.',
               },
             ],
           },
@@ -63,31 +70,36 @@ const handlers = [
         project: [
           {
             name: 'Clone.op.gg',
-            introduce: '테슷트',
-            href: 'http://api.test.com/users/1',
-            startdate: '2022.03',
-            enddate: '2022.10',
-            engname: 'test',
+            introduce:
+              'Riot API를 활용해 리그 오브 레전드(롤) 게임에 대한 사용자의 전적 검색이 가능한 서비스입니다.',
+            href: 'http://clone.op.gg.s3-website.ap-northeast-2.amazonaws.com/',
+            startdate: '2023.06',
+            enddate: '2023.8',
+            engname: 'OPGG',
             method: 'GET',
-            id: 1,
+            id: 3000,
             position: 'Frontend Chapter Lead',
             detail: [
               {
+                id: 30001,
                 role: 'Frontend Chapter Lead',
                 explain:
                   '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
               },
               {
+                id: 30002,
                 role: 'Frontend Chapter Lead',
                 explain:
                   '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
               },
               {
+                id: 30003,
                 role: 'Frontend Chapter Lead',
                 explain:
                   '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
               },
               {
+                id: 30004,
                 role: 'Frontend Chapter Lead',
                 explain:
                   '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',

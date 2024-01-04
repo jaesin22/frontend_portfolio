@@ -1,6 +1,9 @@
+import { getBlogAuthCode } from '../../api/api';
 import BlogInfomation from '../molecule/BlogInfomation';
 import ProjectInformation from '../molecule/ProjectInformation';
 import SectionSubTitle from '../molecule/SectionSubTitle';
+
+import { useQuery } from '@tanstack/react-query';
 
 interface ProjectTypes {
   project: ProjectProps[];
@@ -19,6 +22,17 @@ interface ProjectProps {
   introduce: string;
 }
 const Project = ({ project }: ProjectTypes) => {
+  const { data, isLoading } = useQuery({
+    queryKey: ['blog'],
+    queryFn: getBlogAuthCode,
+  });
+
+  if (isLoading) {
+    return null;
+  }
+
+  console.log(data);
+
   return (
     <div>
       <SectionSubTitle title='Project' />

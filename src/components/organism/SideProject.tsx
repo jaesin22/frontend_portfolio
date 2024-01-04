@@ -29,7 +29,7 @@ const SideProject = ({ project }: ProjectTypes) => {
           <LogoBadge img={OPGG} />
           <div className='mb-12'>
             <CompanyInfoBrief value={items} />
-            <Experience exp={items.detail} />
+            <Experience exp={items.detail} key={items.id} />
           </div>
         </div>
       ))}
