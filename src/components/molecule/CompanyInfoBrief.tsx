@@ -16,9 +16,6 @@ interface ProjectProps {
 }
 
 const CompanyInfoBrief = ({ value }: ProjectTypes) => {
-  if (!value) {
-    return null;
-  }
   return (
     <div className='w-full'>
       <div className='flex items-center box-border'>

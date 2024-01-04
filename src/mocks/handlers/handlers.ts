@@ -62,7 +62,7 @@ const handlers = [
                 id: 20003,
                 role: '형상관리 도구로 Git 신규 도입',
                 explain:
-                  '기존에 svn을 사용하며 충돌이 자주 발생하는 문제점을 해결하기 위해 팀 내 형상관리 도구를 git으로 마이그레이션하여 충돌 빈도를 줄이고, 더 나은 작업 환경을 구축했습니다.',
+                  '기존에 svn을 사용하며 충돌이 자주 발생하는 문제점을 해결하기 위해 팀 내 형상관리 도구를 Git으로 마이그레이션하여 충돌 빈도를 줄이고, 더 나은 작업 환경을 구축했습니다.',
               },
             ],
           },
@@ -72,9 +72,50 @@ const handlers = [
             name: 'Clone.op.gg',
             introduce:
               'Riot API를 활용해 리그 오브 레전드(롤) 게임에 대한 사용자의 전적 검색이 가능한 서비스입니다.',
+            href: 'https://github.com/Jaesin22/clone_op_gg',
+            engname: 'OPGG',
+            method: 'GET',
+            id: 3000,
+            detail: [
+              {
+                id: 30001,
+                postDate: '2023.9.12',
+                postTitle: 'op.gg 클론 코딩 프로젝트 - 성능 개선(1)',
+                postCategory: 'Project/op.gg 클론하기',
+                postLink: 'https://webdiv-diary.tistory.com/24',
+              },
+              {
+                id: 30002,
+                postDate: '2023.9.13',
+                postTitle:
+                  'op.gg 클론 코딩 프로젝트 - 즐겨찾기, 최근 검색 기능 구현',
+                postCategory: 'Project/op.gg 클론하기',
+                postLink: 'https://webdiv-diary.tistory.com/25',
+              },
+            ],
+          },
+          {
+            name: 'Banner Maker(클론)',
+            introduce: `곽철용 짤 생성기 개발 과정에 대한 읽은 뒤, 어느 순간 문득 프로젝트 생각이 나서 직접 만들어보게 되었습니다.
+            
+단순히 정해져 있는 짤(사진)에만 국한된 것이 아닌 내가 직접 사진을 올려서 만들어 볼 수 있게끔 하면 더 좋을 것 같다는 생각이 들어 좀 더 찾아본 결과, 
+이미 godori라는 분이 만들어놓으신 Banner Maker 프로젝트가 있었습니다.
+
+이걸 직접 비슷하게 만들어봐도 좋겠다 라는 생각이 들어 직접 만들게 되었습니다.`,
+            href: 'https://github.com/Jaesin22/jjalmaker',
+            engname: 'Banner Maker',
+            method: 'GET',
+            id: 4000,
+            detail: [],
+          },
+        ],
+
+        side_project: [
+          {
+            name: 'Banner Maker',
+            introduce:
+              'Riot API를 활용해 리그 오브 레전드(롤) 게임에 대한 사용자의 전적 검색이 가능한 서비스입니다.',
             href: 'http://clone.op.gg.s3-website.ap-northeast-2.amazonaws.com/',
-            startdate: '2023.06',
-            enddate: '2023.8',
             engname: 'OPGG',
             method: 'GET',
             id: 3000,
@@ -82,27 +123,17 @@ const handlers = [
             detail: [
               {
                 id: 30001,
-                role: 'Frontend Chapter Lead',
-                explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
+                postDate: '2018-11-11',
+                postTitle: 'testtttt1',
+                postCategory: '프로그래밍/머신러닝',
+                postLink: 'www.naver.com',
               },
               {
                 id: 30002,
-                role: 'Frontend Chapter Lead',
-                explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
-              },
-              {
-                id: 30003,
-                role: 'Frontend Chapter Lead',
-                explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
-              },
-              {
-                id: 30004,
-                role: 'Frontend Chapter Lead',
-                explain:
-                  '쿼타랩 팀 내에 챕터라는 조직의 개념을 처음 도입하고 프론트엔드 챕터 빌딩부터 운영에 대한 DRI를 맡았습니다. 최고의 인재를 모셔 온전한 자율과 책임 기반의 문화를 구현하겠다는 미션을 달성하기 위해 적극적인 채용 인플로우, 브랜딩, 프로세스 수립 등에 기여하였습니다.',
+                postDate: '2018-11-11',
+                postTitle: 'testtttt2',
+                postCategory: '프로그래밍/머신러닝',
+                postLink: 'www.naver.com',
               },
             ],
           },

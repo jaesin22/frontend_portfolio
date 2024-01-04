@@ -3,7 +3,7 @@ import SocialIconGroup from './components/molecule/SocialIconsGroup';
 import Header from './components/organism/Header';
 import IntroduceCard from './components/organism/IntroduceCard';
 import Project from './components/organism/Project';
-import SideProject from './components/organism/SideProject';
+// import SideProject from './components/organism/SideProject';
 import Work from './components/organism/Work';
 
 import './App.css';
@@ -30,11 +30,11 @@ const App = () => {
               <Work WorkValues={data.work} />
             </section>
           )}
-          {data?.project && (
+          {/* {data?.project && (
             <section>
               <SideProject project={data.project} />
             </section>
-          )}
+          )} */}
           {data?.project && (
             <section>
               <Project project={data.project} />
