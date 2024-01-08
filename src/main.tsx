@@ -5,6 +5,7 @@ import App from './App';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 async function enableMocking() {
   if (process.env.NODE_ENV !== 'development') {
@@ -32,10 +33,12 @@ const queryClient = new QueryClient({
 
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
       <React.StrictMode>
-        <App />
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
       </React.StrictMode>
-    </QueryClientProvider>
+    </BrowserRouter>
   );
 });

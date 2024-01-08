@@ -1,18 +1,20 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// import { QueryFunction } from '@tanstack/react-query';
+import { QueryFunction } from '@tanstack/react-query';
 
-// interface APITypes {
-//   id: number;
-//   introduce: string;
-//   work: [];
-//   project: [];
-// }
-// // mock data 연동
-// export const getAPI: QueryFunction<APITypes> = async () => {
-//   const response = await axios.get('/');
-//   return response.data[0];
-// };
+interface APITypes {
+  id: number;
+  introduce: string;
+  work: [];
+  project: [];
+}
+// mock data 연동
+const getAPI: QueryFunction<APITypes> = async () => {
+  const response = await axios.get('/');
+  return response.data[0];
+};
+
+export default getAPI;
 
 // // 블로그 Access Token 가져오기
 // export const getBlogAuthCode = async () => {
