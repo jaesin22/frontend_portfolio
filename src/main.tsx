@@ -1,6 +1,4 @@
 /* eslint-disable import/extensions */
-import React from 'react';
-
 import App from './App';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -30,11 +28,9 @@ const queryClient = new QueryClient({
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
-      <React.StrictMode>
-        <QueryClientProvider client={queryClient}>
-          <App />
-        </QueryClientProvider>
-      </React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </BrowserRouter>
   );
 });
