@@ -1,9 +1,8 @@
 name: CD
+
 # main 브랜치로 push될 때만 동작한다.
-on:
-  push:
-    branches:
-      - main
+on: push
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
