@@ -9,7 +9,7 @@ const handlers = [
           '오늘 내가 만든 프로그램이 누군가에게 도움을 줄 수 있다는 사실에서 동기를 얻습니다. 아이디어가 제 손을 통해 현실화되고, 그렇게 현실화된 프로덕트를 통해 사용자가 해피모먼트를 경험하는 것을 보면 보람을 느낍니다.',
         work: [
           {
-            name: '텔루스 인터네셔널 에이아이코리아',
+            name: '텔루스 인터네셔널',
             introduce:
               '텔루스 인터내셔널 에이아이코리아는 기업의 인공지능 학습 모델을 평가하고 개선하는 일을 돕고 있습니다.',
             engname: 'TELUS',
@@ -73,6 +73,8 @@ const handlers = [
             introduce:
               'Riot API를 활용해 리그 오브 레전드(롤) 게임에 대한 사용자의 전적 검색이 가능한 서비스입니다.',
             href: 'https://github.com/Jaesin22/clone_op_gg',
+            demoUrl:
+              'http://clone.op.gg.s3-website.ap-northeast-2.amazonaws.com/',
             engname: 'OPGG',
             method: 'GET',
             id: 3000,
@@ -95,7 +97,7 @@ const handlers = [
             ],
           },
           {
-            name: 'Banner Maker(클론)',
+            name: 'Banner Maker',
             introduce: `곽철용 짤 생성기 개발 과정에 대한 읽은 뒤, 어느 순간 문득 프로젝트 생각이 나서 직접 만들어보게 되었습니다.
             
 단순히 정해져 있는 짤(사진)에만 국한된 것이 아닌 내가 직접 사진을 올려서 만들어 볼 수 있게끔 하면 더 좋을 것 같다는 생각이 들어 좀 더 찾아본 결과, 
@@ -103,6 +105,7 @@ const handlers = [
 
 이걸 직접 비슷하게 만들어봐도 좋겠다 라는 생각이 들어 직접 만들게 되었습니다.`,
             href: 'https://github.com/Jaesin22/jjalmaker',
+            demoUrl: 'https://jaesin22.github.io/jjalmaker/',
             engname: 'Banner Maker',
             method: 'GET',
             id: 4000,

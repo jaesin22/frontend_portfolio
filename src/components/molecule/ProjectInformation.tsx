@@ -1,3 +1,5 @@
+import IsDemo from '../atom/svg/IsDemo';
+import IsGithub from '../atom/svg/IsGithub';
 import Typography from '../atom/typography/Typography';
 
 interface ProjectTypes {
@@ -13,20 +15,19 @@ interface ProjectProps {
   startdate: string;
   position: string;
   introduce: string;
+  demoUrl: string;
 }
 
 const ProjectInformation = ({ value }: ProjectTypes) => {
   return (
     <div className='w-full mb-8'>
       <div className='flex items-center box-border mb-1'>
-        <a
-          href='value.href'
-          target='_blank'
-          className='transition-opacity duration-200 ease-in-out'
-        >
-          <span className='sr-only'>text</span>
-          <Typography className='font-semibold text-2xl' text={value.name} />
-        </a>
+        <span className='sr-only'>text</span>
+        <Typography className='font-semibold text-2xl' text={value.name} />
+        <div className='flex justify-center items-center ml-3'>
+          <IsGithub githubURL={value.href} />
+          <IsDemo demoUrl={value.demoUrl} />
+        </div>
       </div>
       <div className='text-left'>
         <Typography

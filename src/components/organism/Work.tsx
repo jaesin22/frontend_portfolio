@@ -32,7 +32,9 @@ const Work = ({ WorkValues }: WorkValue) => {
       <SectionSubTitle title='Work' />
       {WorkValues.map((items: WorkProps) => (
         <div className='flex box-border w-full' key={items.id}>
-          <LogoBadge img={logoMap[items.engname]} />
+          <div className='hidden md:block'>
+            <LogoBadge img={logoMap[items.engname]} />
+          </div>
           <div className='mb-12'>
             <CompanyInfoBrief value={items} />
             <Experience exp={items.detail} key={items.id} />
