@@ -19,4 +19,4 @@ jobs:
         with:
           branch: gh-pages
           # 빌드되는 폴더명
-          folder: build
+          folder: dist

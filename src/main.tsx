@@ -8,10 +8,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 async function enableMocking() {
-  if (process.env.NODE_ENV !== 'development') {
-    return;
-  }
-
   const { worker } = await import('./mocks/browsers');
   // eslint-disable-next-line consistent-return
   return worker.start();
