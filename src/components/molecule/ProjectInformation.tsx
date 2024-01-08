@@ -9,13 +9,13 @@ interface ProjectTypes {
 interface ProjectProps {
   name: string;
   enddate: string;
-  href: string;
+  href?: string;
   method: string;
   detail: [];
   startdate: string;
   position: string;
   introduce: string;
-  demoUrl: string;
+  demoUrl?: string;
 }
 
 const ProjectInformation = ({ value }: ProjectTypes) => {
@@ -25,8 +25,8 @@ const ProjectInformation = ({ value }: ProjectTypes) => {
         <span className='sr-only'>text</span>
         <Typography className='font-semibold text-2xl' text={value.name} />
         <div className='flex justify-center items-center ml-3'>
-          <IsGithub githubURL={value.href} />
-          <IsDemo demoUrl={value.demoUrl} />
+          {value.href && <IsGithub githubURL={value.href} />}
+          {value.demoUrl && <IsDemo demoUrl={value.demoUrl} />}
         </div>
       </div>
       <div className='text-left'>

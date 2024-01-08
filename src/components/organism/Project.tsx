@@ -15,6 +15,7 @@ interface ProjectProps {
   position: string;
   introduce: string;
   id: string;
+  demoUrl: string;
 }
 
 interface BlogProps {
