@@ -1,6 +1,4 @@
 /* eslint-disable import/extensions */
-import React from 'react';
-
 import App from './App';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
