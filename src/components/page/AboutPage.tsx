@@ -13,6 +13,7 @@ const AboutPage = () => {
     queryKey: ['api'],
     queryFn: getAPI,
   });
+
   if (isLoading) {
     return null;
   }

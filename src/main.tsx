@@ -1,4 +1,6 @@
 /* eslint-disable import/extensions */
+import React from 'react';
+
 import App from './App';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -6,6 +8,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 async function enableMocking() {
+  if (process.env.NODE_ENV !== 'development') {
+    return;
+  }
+
   const { worker } = await import('./mocks/browsers');
   // eslint-disable-next-line consistent-return
   return worker.start();
@@ -28,9 +34,11 @@ const queryClient = new QueryClient({
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <App />
-      </QueryClientProvider>
+      <React.StrictMode>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </React.StrictMode>
     </BrowserRouter>
   );
 });
