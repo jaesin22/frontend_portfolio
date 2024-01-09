@@ -8,10 +8,18 @@ interface APITypes {
   work: [];
   project: [];
 }
+
+const instance = axios.create({
+  responseType: 'json',
+});
+
 // mock data 연동
 const getAPI: QueryFunction<APITypes> = async () => {
-  const response = await axios.get('/');
-  return response.data[0];
+  const response = await instance.get(
+    'https://b4adfed5-d951-4ad6-877f-f8fc439acd2e.mock.pstmn.io/about'
+  );
+
+  return response.data;
 };
 
 export default getAPI;
